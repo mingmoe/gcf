@@ -1,0 +1,74 @@
+// USE MIT LICENSE MADE BY MINGMOE
+// PART OF PROJECT GCF
+// 主样式定义文件
+
+@use './scss/base.scss';
+@use './scss/options.scss';
+
+// 标题
+.gcf-title {
+    // 初始化
+    @include base.gcfInit();
+
+    margin-top: 150px;
+
+    // 文字居中
+    text-align: center;
+    // 文字大小:2em
+    font-size: 2em;
+    // 文字加粗
+    font-weight: bold;
+
+    // 隐藏溢出的部分
+    overflow: hidden;
+}
+
+// gcf文本
+.gcf-text{
+    // 初始化
+    @include base.gcfInit();
+
+    // 文本居中
+    text-align: center;
+
+    // 文本大小:1em
+    font-size: 1em;
+
+    // 隐藏溢出
+    overflow: hidden;
+}
+
+// 按钮
+.gcf-button{
+    // 初始化
+    @include base.gcfInit();
+
+    // 设置填充
+    padding: 20px 30px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    display: block;
+
+    // 文本居中
+    text-align: center;
+
+    // 设置文字颜色和背景颜色
+    background-color: base.$ButtonBackgroundColor;
+    color: base.$ButtonColor;
+
+    // 设置hover后的颜色
+    &:hover{
+        background-color: base.$ButtonHoverBackgroundColor;
+        color: base.$ButtonHoverColor;
+    }
+
+    // 设置颜色渐变
+    @include base.colorTransition();
+    @include base.backgroundTransition();
+
+    // 删除边框
+    border: none;
+}
+

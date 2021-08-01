@@ -1,0 +1,68 @@
+// USE MIT LICENSE MADE BY MINGMOE
+// PART OF PROJECT GCF
+// 一些基础定义
+
+// 重置位置
+@mixin gcfInit {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+// transition的适配效果
+@mixin transition($value) {
+    transition: $value;
+    -webkit-transition: $value;
+}
+
+// 颜色渐变
+@mixin colorTransition {
+    @include transition(color 0.8s);
+}
+
+// 背景颜色渐变
+@mixin backgroundTransition {
+    @include transition(background 0.8s);
+}
+
+// 代码字体
+@mixin codeFont{
+    font-family: 'Fira Code', monospace;
+}
+
+// 设置flex
+@mixin justify-content($value){
+    -webkit-justify-content: $value;
+     -moz-justify-content: $value;
+      -ms-justify-content: $value;
+          justify-content: $value;
+}
+
+// 设置居中
+.center{
+    width: 100%;
+}
+
+//===========颜色定义===========//
+// 按钮颜色
+$ButtonColor : #ffffff;
+
+// 按钮背景颜色
+$ButtonBackgroundColor : rgb(20, 180, 255);
+
+// 按钮hover颜色
+$ButtonHoverColor : rgb(20, 180, 255);
+
+// 按钮hover背景颜色
+$ButtonHoverBackgroundColor : #ffffff;
+
+
+
+
+
+
+
+
+
+
+
+

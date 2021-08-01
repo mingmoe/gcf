@@ -1,0 +1,91 @@
+// USE MIT LICENSE MADE BY MINGMOE
+// PART OF PROJECT GCF
+// 设置选项
+
+@use 'base.scss';
+
+// 选项容器
+.gcf-container {
+    @include base.gcfInit();
+
+    // 启用弹性容器
+    display: flex; 
+
+    // 自顶向下扩展
+    flex-wrap: wrap;
+
+    // item居中
+    @include base.justify-content(safe center)
+}
+
+
+// 选项
+.gcf-item{
+    @include base.gcfInit();
+
+    // 填充周围
+    margin: 10% 50px;
+
+    // 取消button格式
+    border: none;
+
+    // 填充周围
+    padding: 10px;
+
+    // 注释字体大小
+    font-size: 1em;
+}
+
+// 代码
+.gcf-pre{
+    @include base.gcfInit();
+    @include base.codeFont();
+
+    // 填充周围
+    padding: 10px;
+    // 设置边框
+    border: 1px solid #ccc;
+}
+
+.gcf-code{
+    @include base.gcfInit();
+    @include base.codeFont();
+
+    // 代码字体大小
+    font-size: 1em;
+
+    // 代码靠左显示
+    text-align: left;
+
+    // 保留空白
+    white-space: pre;
+
+    // 每个代码块一行
+    display: block;
+}
+
+// 输出代码
+.gcf-output{
+    @include base.gcfInit();
+    @include base.codeFont();
+
+    // 居中
+    margin-left: auto;
+    margin-right: auto;
+
+    // 填充周围
+    margin: 20px 50px;
+    padding: 10px 20px;
+
+    code{
+        @include base.gcfInit();
+        @include base.codeFont();
+        // 代码靠左
+        text-align: left;
+        // 每个代码块一行
+        display: block;
+    }
+    
+    // 设置边框
+    border: 1px solid #ccc;
+}
